@@ -13,8 +13,8 @@ app = Flask(__name__)
 #     'C:\\Users\\mo6tz\\Desktop\\ML project\\flask-app\\app\\models\\model.sav', 'rb'))
 # enc = pickle.load(open(
 #     'C:\\Users\\mo6tz\\Desktop\\ML project\\flask-app\\app\\models\\enc.sav', 'rb'))
-model = pickle.load(open('./app/models/model.sav'))
-enc = pickle.load(open('./app/models/enc.sav'))
+model = pickle.load(open('../../flask-app/app/models/model.sav'))
+enc = pickle.load(open('../../flask-app/app/models/enc.sav'))
 
 
 @app.route('/api/v1/single/prediction', methods=['POST'])
