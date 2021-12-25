@@ -1,6 +1,6 @@
 FROM python:3.9-slim-buster
 # make a Dir for the app
-WORKDIR /flask-app
+WORKDIR /app
 
 # install requirments
 COPY ./requirements.txt requirements.txt
