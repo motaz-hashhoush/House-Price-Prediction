@@ -5,6 +5,7 @@ from app.services import check_required_features
 from app.services import get_data_of_features
 
 
+# flask app
 app = Flask(__name__)
 
 # loding the objects
