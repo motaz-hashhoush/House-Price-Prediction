@@ -1,13 +1,13 @@
 FROM python:3.9-slim-buster
 # make a Dir for the app
-WORKDIR /app
+WORKDIR /flask-app
 
 # install requirments
 COPY ./requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
 # copy source code
-COPY /app .
+COPY /flask-app .
 
 # port
 EXPOSE 8081
