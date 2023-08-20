@@ -6,6 +6,7 @@ Welcome to my House Price Prediction project! In this repository, I've tackled t
 
 The goal of this project was to accurately predict house prices based on a rich dataset of features, including numerical, categorical, and temporal attributes. Leveraging data preprocessing, feature engineering, and model optimization, I aimed to create robust regression models that can provide accurate estimates of house sale prices.
 
+
 ## Key Features
 
 - Data preprocessing to handle missing values and categorical variables.
@@ -17,18 +18,34 @@ The goal of this project was to accurately predict house prices based on a rich 
 ## Repository Contents
 
 - `data/`: This folder contains the dataset provided by Kaggle, including both the training and test sets.
-- `notebooks/`: Jupyter notebooks detailing the step-by-step process of data analysis, feature engineering, and model development.
-- `predictions/`: This folder holds the predictions made by the trained models on the test dataset.
+- `Code.ipynb`: Jupyter notebooks detailing the step-by-step process of data analysis, feature engineering, and model development.
 - `README.md`: You're reading it! An overview of the project, its contents, and how to use it.
+- `flask-app/`: Contains the Flask API for making single predictions.
+    - `main.py`: Run this script to start the Flask app.
+    - `app/`: Subdirectory containing the API logic.
+        - `app.py`: API routes and responses.
+        - `service.py`: Helper functions for data processing.
 
-## Getting Started
 
-1. Clone this repository: `git clone https://github.com/your-username/house-price-prediction.git`
-2. Navigate to the repository: `cd house-price-prediction`
-3. Open and explore the Jupyter notebooks in the `notebooks/` directory.
-4. Follow the notebooks to understand the data analysis, feature engineering, and modeling process.
-5. The `predictions/` directory contains the predictions made by the models on the test set.
 
+## Flask API for Single Predictions
+
+The `flask-app` directory contains a Flask API that allows you to make single predictions using the trained model. Here's how you can run the API:
+
+1. Install the required dependencies by running: `pip install -r requirements.txt`
+2. Navigate to the `flask-app` directory: `cd flask-app`
+3. Run the Flask app by executing `python main.py`:
+
+
+The API will start running locally on `http://localhost:5000`.
+
+4. To make a single prediction, you can send a POST request to the `/api/v1/single/prediction` endpoint with JSON data containing the required features for prediction.
+
+Example using `curl`:
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"feature1": value1, "feature2": value2, ...}' http://localhost:5000/api/v1/single/prediction
+````
 ## Dependencies
 
 - Python 3.x
@@ -37,13 +54,9 @@ The goal of this project was to accurately predict house prices based on a rich 
 
 ## Note
 
-This project is for educational and demonstrative purposes, showcasing my data science skills. It was originally created for the Kaggle competition and is shared here to highlight my expertise in data preprocessing, feature engineering, and regression modeling.
+This project is for showcasing my data science skills in 2021 (Of course now I am much better 😊). It was originally created for the Kaggle competition and is shared here to highlight my expertise in data preprocessing, feature engineering, and regression modeling.
 
 Feel free to explore the notebooks and reach out if you have any questions or suggestions!
 
 ---
-
-**Author:** Your Name
-**Contact:** your.email@example.com
-**Portfolio:** [Your Upwork Portfolio](https://www.upwork.com/your-profile-link)
 
