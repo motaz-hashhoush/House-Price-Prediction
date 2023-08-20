@@ -8,11 +8,7 @@ from app.services import get_data_of_features
 # flask app
 app = Flask(__name__)
 
-# loding the objects
-# model = pickle.load(open(
-#     'C:\\Users\\mo6tz\\Desktop\\ML project\\flask-app\\app\\models\\model.sav', 'rb'))
-# enc = pickle.load(open(
-#     'C:\\Users\\mo6tz\\Desktop\\ML project\\flask-app\\app\\models\\enc.sav', 'rb'))
+# loding the model
 model = pickle.load(open('./models/model.sav'))
 enc = pickle.load(open('./models/enc.sav'))
 
